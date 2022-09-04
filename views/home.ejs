@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheets.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>portfolioss</title>
+    </head>
+    <body>
+        <header class="mb-1">
+            <% layout('layouts/boilerplate')%>
+        </header>
+
+        <main class="mt-2">
+            <div class="my-auto text-center">
+
+            <h2 class="display-5">  My Portfolio &#128203 </h2>
+            <h1 class="display-3 mb-3">Hello, my name is Erika!</h1>
+           
+            <img mb-3 src="/images/me.png" width="300px"/>
+            
+            <h1 class="display-2"> &#x1F4BB </h1>
+            <h3 class="display-6 d-inline"> (Soon to be Developer <span class="d-inline"><%- include('./partials/dots') %></span>)</h3>
+        </div>
+
+    <div class="mb-3">
+
+        <div class="mt-4 text-center">
+            <button class="btn btn-lg" id="button1" data-bs-toggle="modal" data-bs-target="#aboutmeModal">
+                <i class="fa fa-user-plus"></i>
+            </button>
+            <div class="modal fade" id="aboutmeModal" aria-hidden="true">
+                <%- include('./partials/aboutme-modal') %>
+            </div>
+
+        <div class="mt-4 text-center">
+            <button class="btn btn" id="button2" data-bs-toggle="modal" data-bs-target="#certificatesModal">
+                <i class="fa fa-graduation-cap"></i>
+            </button>
+            <div class="modal fade" id="certificatesModal" aria-hidden="true">
+                <%- include('./partials/certificates-modal') %>
+            </div>
+           
+
+        <div class="mt-4 text-center">
+            <button class="btn btn" id="button3" data-bs-toggle="modal" data-bs-target="#projectsModal">
+                <i class="fa fa-folder-open"></i>
+            </button>
+            <div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <%- include('./partials/projects-modal') %>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <%- include('./partials/game') %>
+        </div>
+    </div>
+
+
+    
+   
+
+
+
+        </main>
+       
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+    
+    </body>
+    </html>
+   
