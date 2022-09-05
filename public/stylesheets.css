@@ -64,3 +64,7 @@ background-color: #b6917c;
   border-radius: 5px;
   color:black
  }
+
+ .d-none{
+  display: none;
+}
