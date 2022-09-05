@@ -11,11 +11,11 @@ const app = express();
 
 app.engine ('ejs', ejsMate )
 app.set ('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', 'src/views');
+app.set('public', 'src/public');
 // mongoose.connect('mongodb://localhost:3000/portfolio');
 app.use(express.urlencoded ({ extended: true }));
 app.use(methodOverride('_method'));
-app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'')));
 app.use(morgan('tiny'))
 const router = express.Router();
@@ -26,11 +26,11 @@ router.get('/', (req, res) => {
 
 
 
-app.listen(3000, () =>{
-    console.log("Listening on port 3000!")
-})
+// app.listen(9000, () =>{
+//     console.log("Listening on port 9000!")
+// })
 
-app.use('/', router)
+app.use(`/.netlify/functions/app`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
