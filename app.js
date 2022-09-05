@@ -3,6 +3,7 @@ const path = require('path');
 const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
+const serverless = require('serverless-http');
 
 
 const app = express();
@@ -17,8 +18,9 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'')));
 app.use(morgan('tiny'))
+const router = express.Router();
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.render('home')
 });
 
@@ -27,3 +29,8 @@ app.get('/', (req, res) => {
 app.listen(3000, () =>{
     console.log("Listening on port 3000!")
 })
+
+app.use('/', router)
+
+module.exports = app;
+module.exports.handler = serverless(app);

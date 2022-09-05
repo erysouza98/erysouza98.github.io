@@ -4,6 +4,7 @@ DS_STORE
 bazel-*
 e2e_test.*
 node_modules
+functions
 bower_components
 tools/gulp-tasks/cldr/cldr-data/
 
