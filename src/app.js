@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname,'')));
 app.use(morgan('tiny'))
 const router = express.Router();
 
-router.get('/portfolio', (req, res) => {
+router.get('/', (req, res) => {
     res.render('home')
 });
 
@@ -30,7 +30,7 @@ router.get('/portfolio', (req, res) => {
 //     console.log("Listening on port 9000!")
 // })
 
-app.use(`/.netlify/functions/app`, router);
+app.use(`./netlify/functions/app`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
