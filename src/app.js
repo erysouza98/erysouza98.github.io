@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
 //     console.log("Listening on port 9000!")
 // })
 
-app.use(`/.netlify/functions/app`, router);
+app.use(`/.netlify/functions/api`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);
