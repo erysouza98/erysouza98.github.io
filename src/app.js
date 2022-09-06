@@ -11,8 +11,7 @@ const app = express();
 
 app.engine ('ejs', ejsMate )
 app.set ('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
+app.set('views', 'src/views');
 app.set('public', 'src/public');
 // mongoose.connect('mongodb://localhost:3000/portfolio');
 app.use(express.urlencoded ({ extended: true }));
