@@ -40,3 +40,5 @@ backend/package-lock.json
 
 hs_err_*
 .run
+# Local Netlify folder
+.netlify
