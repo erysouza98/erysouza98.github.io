@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname,'')));
 app.use(morgan('tiny'))
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/portfolio', (req, res) => {
     res.render('home')
 });
 
