@@ -1,6 +1,6 @@
 [build]
   functions = "functions"
-  CI=" npm run build"
+  CI="false"
 
 [dev]
   publish = "dist"
