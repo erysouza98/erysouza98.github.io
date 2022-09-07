@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://erysouza98.github.io/src/public/game.css">
+    <script src="https://erysouza98.github.io/src/seeds/game.js"></script>
+</head>
+
+<body>
+    <div id="principle">
+        <h3 class="mt-5">Contacts?</h3>
+        <h1 class="display-5" id="title"> Win me in this Challenge! <i class="fa fa-gamepad"></i> </h1>
+        <h5 class="mt-1 mb-3">Win me 2 times and a form will show up</h5>
+
+        <div class="row align-items-center">
+            <div class="col-5">
+                <div id="player">
+                    <h2 class="display-5" id="player-name">You <i class="fa fa-user"></i></h2>
+                    <span id="player-score">0</span>
+                    <div class="row">
+                        <div class="col-4">
+                            <a class="clickable" id="player-selection-1" onclick="play(1)"><img class="hover" id="rock" src="https://erysouza98.github.io/src/public/images/rock.png" width="120"></a>
+                        </div>
+                        <div class="col-4">
+                            <a class="clickable" id="player-selection-2" onclick="play(2)"><img class="hover" id="scissors" src="https://erysouza98.github.io/src/public/images/scissors.png" width="120"></a>
+                        </div>
+                        <div class="col-4">
+                            <a class="clickable" id="player-selection-3" onclick="play(3)"><img class="hover" id="paper" src="https://erysouza98.github.io/src/public/images/paper.png" width="120"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 align-items-center">
+                <div id="versus" class="align-items-center">
+                    <img id="versus" src="https://erysouza98.github.io/src/public/images/vs.png" width="200" >
+                </div>
+
+            </div>
+            <div class="col-5">
+                <div id="computer">
+                    <h2 class="display-5" id="computer-name">Me <i class="fa fa-laptop"></i></i></h2>
+                    <span id="computer-score">0</span>
+        
+                    <div class="row">
+                        <div class="col-4">
+                            <a id="computer-selection-1"><img id="rock" src="https://erysouza98.github.io/src/public/images/rock.png" width="120"></a>
+                        </div>
+                        <div class="col-4">
+                            <a id="computer-selection-2"><img id="scissors" src="https://erysouza98.github.io/src/public/images/scissors.png" width="120"></a>
+                        </div>
+                        <div class="col-4">
+                            <a id="computer-selection-3"><img id="paper" src="https://erysouza98.github.io/src/public/images/paper.png" width="120"></a>
+                    
+                        </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+  
+
+<div class="text-left" id="message">Message:</div>
+
+<div class="row d-none" id="form">
+    <div class="col-12">
+            <%- include('./form') %>
+    </div>
+</div>
+
+</body>
+</html>

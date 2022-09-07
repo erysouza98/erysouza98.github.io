@@ -1,6 +1,7 @@
 [build]
-  publish = 'dist/'
-  functions = 'functions'
+    publish = 'dist/'
+    functions = 'functions'
+    
 
 [[redirects]]
   from = "*"
