@@ -1,10 +1,11 @@
 const express = require('express');
 const serverless = require('serverless-http');
+const path = require('path')
 const ejs = require('ejs');
 
 const app = express();
 
-app.set('views','src/views');
+app.set('views', path.join('src/views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {

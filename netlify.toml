@@ -4,8 +4,8 @@
 
 [[redirects]]
   from = "*"
-  to = "/.netlify/src/app/"
+  to = "/.netlify/functions/app/"
   status = 200
 
 [functions]
-  included_files = ['src/views/**/*.ejs']
+  included_files = ['functions/views/**/*.ejs']
