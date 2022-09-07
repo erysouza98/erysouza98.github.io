@@ -4,8 +4,6 @@ var computerSelection = 0;
 var computerScore = 0;
 var winner = -1;
 function play(select) {
-
-    console.log(playerScore)
     playerSelection = select;
 
     computerSelection = Math.floor((Math.random() * (3 - 1 + 1))) + 1;
