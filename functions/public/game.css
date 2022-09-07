@@ -84,6 +84,6 @@ ul#player-selection li a img, ul#computer-selection li a img{
     display: block !important;
 }
 
-.versus{
+#versus{
     width: 100% !important;
 }
