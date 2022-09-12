@@ -13,9 +13,16 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 this.to_name.value = 'Erika'
+                // aparecer loader
+                document.getElementById("myForm").classList.add("loading")
+                document.getElementById("loader").classList.remove("d-none")
                 emailjs.sendForm('service_yhwnahf', 'template_gi65y7c', this)
                     .then(function() {
+
+                        // desaparecer loader
                         console.log('SUCCESS!');
+                        document.getElementById("myForm").classList.remove("loading")
+                        document.getElementById("loader").classList.add("d-none")
                         
                             document.getElementById("response").classList
                             .remove("d-none");
@@ -28,7 +35,13 @@
     </script>
 </head>
 <body>
+
+
+
+
 <div class="align-items-center" id="myForm">
+    <div class="d-none loading-animation" id="loader"> </div>
+
     <form id="contact-form">
         <!-- my name (Erika) -->
         <input type="hidden" name="to_name"  id="to_name">

@@ -70,14 +70,23 @@ function play(select) {
        .add("selected");
 
         if(winner == 0){
-        document.getElementById('message').innerHTML = 'Oh no, a draw... Try again';
+        document.getElementById('message').innerHTML = 'Oh no, a draw... Try again.';
+        document.getElementById('message').classList.add("b-yellow")
+        document.getElementById('message').classList.remove("b-green")
+        document.getElementById('message').classList.remove("b-red")
     }
         else if(winner == 1){
         document.getElementById('message').innerHTML = 'Congratulations!! You Won!!!';
+        document.getElementById('message').classList.add("b-green")
+        document.getElementById('message').classList.remove("b-yellow")
+        document.getElementById('message').classList.remove("b-red")
         playerScore++;
     }
         else if(winner == 2){
-        document.getElementById('message').innerHTML = 'I won this one, keep trying';
+        document.getElementById('message').innerHTML = 'I won this one, but keep trying';
+        document.getElementById('message').classList.add("b-red")
+        document.getElementById('message').classList.remove("b-green")
+        document.getElementById('message').classList.remove("b-yellow");
         computerScore++;
     }
 
