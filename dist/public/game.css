@@ -87,3 +87,16 @@ ul#player-selection li a img, ul#computer-selection li a img{
 #versus{
     width: 100% !important;
 }
+
+.b-green{
+    background-color: rgb(68, 184, 68)!important;
+}
+
+.b-yellow{
+    background-color: rgb(230, 230, 75)!important;
+    
+}
+
+.b-red{
+    background-color: rgb(227, 64, 64)!important;
+}
